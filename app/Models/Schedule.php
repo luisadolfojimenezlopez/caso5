@@ -26,12 +26,12 @@ protected $perpage = 10;
     ];
     public function report()
     {
-        return $this->hasMany(Report::class);
+        return $this->HasMany(Report::class);
     }
     
 public function attendance()
     {
-        return $this->hasMany(Attendance::class);
+        return $this->HasMany(Attendance::class);
     }
 
 

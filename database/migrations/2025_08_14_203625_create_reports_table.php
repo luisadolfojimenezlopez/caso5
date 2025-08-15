@@ -17,7 +17,7 @@ return new class extends Migration
 
 
 
-
+$table->string('id_report');
 $table->date('date');
 $table->time('generate_hour');
 

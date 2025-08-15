@@ -22,7 +22,7 @@ class Responsible extends Model
 
     public function employee()
     {
-        return $this->hasMany(Employee::class);
+        return $this->HasMany(Employee::class);
     }
 
    

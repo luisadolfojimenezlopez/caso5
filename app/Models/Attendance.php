@@ -12,7 +12,7 @@ class Attendance extends Model
 
 
     protected $fillable = [
-        'id_employee',
+        
         'id_employee',
         'entry_time',
         'departure_time',

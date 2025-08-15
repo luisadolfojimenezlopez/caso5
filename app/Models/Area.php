@@ -30,11 +30,11 @@ class Area extends Model
 
 public function attendance()
     {
-        return $this->hasMany(Attendance::class);
+        return $this->HasMany(Attendance::class);
     }
 
 public function report()
     {
-        return $this->hasMany(Report::class);
+        return $this->HasMany(Report::class);
     }
 }
