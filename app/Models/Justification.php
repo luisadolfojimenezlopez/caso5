@@ -24,8 +24,17 @@ protected $perpage = 10;
 
 public function report()
     {
-        return $this->hasMany(Report::class);
+        return $this->Hasone(Report::class);
     }
 
   
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }

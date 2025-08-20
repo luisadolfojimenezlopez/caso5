@@ -47,7 +47,7 @@ protected $perpage = 10;
 
 public function area()
     {
-        return $this->hasTo(Area::class);
+        return $this->belongsTo(Area::class);
     }
 
     

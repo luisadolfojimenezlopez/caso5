@@ -37,4 +37,8 @@ public function report()
     {
         return $this->HasMany(Report::class);
     }
+    public function employee()
+    {
+        return $this->HasMany(Employee::class);
+    }
 }

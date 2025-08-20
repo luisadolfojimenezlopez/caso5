@@ -24,12 +24,12 @@ protected $perPage = 10;
     
  public function employee()
     {
-        return $this->HasMany(Employee::class);
+        return $this->belongsTo(Employee::class);
     }
 
 public function area()
     {
-        return $this->HasMany(Area::class);
+        return $this->hasMany(Area::class);
     }
 
     public function justification()

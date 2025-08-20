@@ -31,4 +31,9 @@ public function report()
         return $this->hasMany(Report::class);
     }
 
+public function schedule()
+    {
+        return $this->belongsTo(Schedule::class);
+    }
+
 }

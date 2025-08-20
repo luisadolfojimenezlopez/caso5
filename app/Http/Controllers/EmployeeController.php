@@ -22,6 +22,7 @@ class EmployeeController extends Controller
 // Muestra el formulario para crear una nueva área
 public function create()
 {
+
     $employee = new Employee(); // Creamos un objeto vacío para reutilizar en la vista
     return view('employees.create', compact('employee'));
 }
@@ -78,7 +79,7 @@ public function update(EmployeeRequest $request, Employee $employee)
 
     // Redirigimos con mensaje de éxito
     return redirect()->route('employees.index')
-                     ->with('success', 'Empleado actualizado con éxito.');
+                     ->with('updated', 'Empleado actualizado con éxito.');
 }
 
 
@@ -86,14 +87,15 @@ public function update(EmployeeRequest $request, Employee $employee)
 
 
 // Elimina un área de la base de datos
-public function destroy(Employee $employee)
+public function destroy(int $id)
 {
     // Borra el área
+    $employee = Employee::find($id);
     $employee->delete();
 
     // Redirige con mensaje de éxito
     return redirect()->route('employees.index')
-                     ->with('success', 'Empleado eliminado con éxito.');
+                     ->with('deleted', 'Empleado eliminado con éxito.');
 }
 
 
